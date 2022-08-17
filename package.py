@@ -126,7 +126,7 @@ class Package:
     def extract(self, file_name_or_id: typing.Union[str, int], out_path: str) -> None:
         try:
             file_name_or_id = int(file_name_or_id, 16)
-        except TypeError:
+        except ValueError:
             pass  # is a file name
 
         print_aligned("File Identifier:", file_name_or_id)
